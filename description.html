@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Description des services - ALL SERVICES</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .email {
+            display: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .note, .checklist, .cgu {
+            margin-top: 20px;
+        }
+
+        .button-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .accept-btn, .reveal-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .accept-btn {
+            background-color: black;
+            color: white;
+        }
+
+        .accept-btn:hover {
+            background-color: #333;
+        }
+
+        .reveal-btn {
+            background-color: #0066cc;
+            color: white;
+            display: none;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            display: none;
+            margin-top: 10px;
+        }
+
+        .topnav a {
+            margin-right: 15px;
+        }
+
+        .title {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1 class="title">ALL SERVICES</h1>
+        <hr class="separator">
+
+        <h2>Description des services</h2>
+
+        <div class="button-container" id="accept-button">
+            <p>Veuillez lire et accepter les conditions générales d'utilisation pour afficher l'adresse email :</p>
+            <button class="accept-btn" id="accept-btn" onclick="handleAcceptance()">J’ai lu et j’accepte les CGU</button>
+            <p id="error-message" class="error">Veuillez lire les CGU.</p>
+            <button class="reveal-btn" id="reveal-button" onclick="revealEmail()">Afficher l’adresse email</button>
+        </div>
+
+        <div id="email-block">
+            <p>Pour obtenir un service, veuillez me contacter à l'adresse suivante :</p>
+            <p class="email">alra.contact.official@gmail.com</p>
+        </div>
+
+        <div class="note">
+            <p>Toutes les demandes seront étudiées. Selon le service demandé, il pourra être nécessaire de fournir du matériel. L'anonymat est respecté, et aucune demande n'est taboue ni interdite.</p>
+            <p><strong>Attention :</strong> Envoyer une demande ne garantit pas que celle-ci sera acceptée ou réalisée.</p>
+        </div>
+
+        <h3>Lors de votre demande, veuillez préciser :</h3>
+        <ul class="checklist">
+            <li>Le service souhaité, avec un maximum de détails</li>
+            <li>Le budget proposé et le mode de paiement souhaité</li>
+            <li>Le matériel éventuellement fourni</li>
+            <li>La durée et le lieu souhaités pour la réalisation</li>
+            <li>Autres précisions : raisons, concessions possibles, services échangeables, etc.</li>
+        </ul>
+
+        <div class="topnav">
+            <a href="home.html">Accueil</a>
+            <a href="typesservices.html">Quels types de services puis-je demander ?</a>
+            <a href="paiement.html">Quels types de paiement ?</a>
+        </div>
+
+        <section class="cgu">
+            <h2>Conditions Générales d’Utilisation (CGU)</h2>
+
+            <h3>1. Objet</h3>
+            <p>Les présentes Conditions Générales d’Utilisation (CGU) ont pour objet de définir les modalités d’utilisation du site “ALL SERVICES” ainsi que les conditions applicables à toute demande de prestation. L’utilisation du site implique l’acceptation entière et sans réserve des présentes CGU.</p>
+
+            <h3>2. Nature des prestations</h3>
+            <p>Le site propose des prestations variées définies sur mesure. Aucune demande n’est automatiquement acceptée.
+            Le prestataire peut librement refuser une demande, 
+            conformément à l’article 1101 et 1102 du Code civil relatif à la liberté contractuelle.
+            Aucune prestation nocive (physiquement ou mentalement), sexuelle ou illicite ne sera acceptée.
+            Le prestataire a le droit de dénoncer une demande correspondant aux prestations citées ci-dessus.</p>
+
+            <h3>3. Absence de garantie d’exécution</h3>
+            <p>Envoyer une demande n'engage en rien le prestataire. 
+            L'accord ne prend effet qu'après acceptation explicite par écrit.</p>
+
+            <h3>4. Limites légales</h3>
+            <p>Les prestations excluent toute activité illicite. 
+            En vertu de la loi pour la Confiance dans l'Économie Numérique (articles 6, I, 2 et suivants), aucune demande contraire au droit français ne sera traitée. 
+            Les actes réglementés (ex. droit, médecine) sont strictement réservés aux professionnels autorisés.</p>
+
+            <h3>5. Responsabilité</h3>
+            <p>Le prestataire s’engage sur une obligation de moyens, non de résultats. 
+            Aucune garantie de succès n’est donnée. 
+            Sa responsabilité ne peut être engagée pour des dommages indirects liés à l’usage du site ou des services.
+            Le prestataire explicitera ses conditions avant d'effectuer la prestation et avant tout paiement.</p>
+
+            <h3>6. Données personnelles</h3>
+            <p>Les données fournies sont traitées dans le respect de la loi “Informatique et Libertés” (n°78-17) et du RGPD. 
+            L’utilisateur peut demander à tout moment la suppression de la discussion et de ses informations via l’adresse email de contact.
+            Cela sera fait dans les possibilités du prestataire, qui ne garantit en rien la suppression totale des informations sur les services utilisés (Email).</p>
+
+            <h3>7. Juridiction compétente</h3>
+            <p>Les CGU sont régies par la loi française. 
+            En cas de litige, les tribunaux compétents seront ceux du ressort de Paris, sauf accord contraire.</p>
+
+            <h3>8. Acceptation</h3>
+            <p>En envoyant une demande, l’utilisateur reconnaît avoir pris connaissance des CGU et les accepter sans réserve.
+            Il accède uniquement après en avoir pris connaissance à l'adresse de contact.
+			Le prestataire n'accepte la requête qu'après le paiement et l'échange de service effectué.
+			L'utilisateur doit garantir le paiement et service avant l'acceptation de la prestation 
+			et le prestataire se doit de l'accomplir si l'utilisateur a respecté les CGU.</p>
+        </section>
+    </div>
+
+    <script>
+        let hasScrolledToBottom = false;
+
+        window.addEventListener("scroll", function () {
+            const scrollTop = window.scrollY + window.innerHeight;
+            const docHeight = document.documentElement.offsetHeight;
+            if (scrollTop >= docHeight - 10) {
+                hasScrolledToBottom = true;
+            }
+        });
+
+        function handleAcceptance() {
+            if (!hasScrolledToBottom) {
+                document.getElementById("error-message").style.display = "block";
+            } else {
+                document.getElementById("error-message").style.display = "none";
+                document.getElementById("reveal-button").style.display = "inline-block";
+            }
+        }
+
+        function revealEmail() {
+            document.getElementById("email-block").style.display = "block";
+            const email = document.querySelector(".email");
+            if (email) {
+                email.style.display = "block";
+            }
+            document.getElementById("reveal-button").style.display = "none";
+        }
+    </script>
+</body>
+</html>
